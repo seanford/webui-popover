@@ -598,9 +598,9 @@
                     url: this.getUrl(),
                     type: this.options.async.type,
                     cache: this.getCache(),
-                    beforeSend: function(xhr) {
+                    beforeSend: function(xhr, settings) {
                         if (that.options.async.before) {
-                            that.options.async.before(that, xhr);
+                            that.options.async.before(that, xhr, settings);
                         }
                     },
                     success: function(data) {
